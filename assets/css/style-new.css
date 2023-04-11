@@ -3531,16 +3531,61 @@ main.touch .case-intro-image .btn-wrap {
     display: inline-block;
     padding: 0 25px;
     height: 50px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 50px;
     border-radius: 25px;
     background-color: #f1f1f1;
+    font-family: 'Dennis Sans';
   }
   
-  .chip img {
-    float: left;
-    margin: 0 10px 0 -25px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-  }
+ 
+
+  /* ------------------------- Fonts -------------------------------------------------- */
+
+@font-face {
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-Light.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-LightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-Regular.otf') format('opentype');
+    font-weight: 350;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-Italic.otf') format('opentype');
+    font-weight: 350;
+    font-style: italic;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Dennis Sans';
+    src: url('../fonts/NeueMontreal-BoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: auto;
+}
