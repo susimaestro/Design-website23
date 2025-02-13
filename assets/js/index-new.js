@@ -1017,6 +1017,7 @@ function initScrollLetters() {
             }
         });
 
+        console.log("Before animation trigger");
     // helper function that clones the targets, places them next to the original, then animates the xPercent in a loop to make it appear to roll across the screen in a seamless loop.
     function roll(targets, vars, reverse) {
         vars = vars || {};
@@ -1024,7 +1025,7 @@ function initScrollLetters() {
         const tl = gsap.timeline({
                 repeat: -1,
                 onReverseComplete() {
-                    this.totalTime(this.rawTime() + this.duration() * 10); // otherwise when the playhead gets back to the beginning, it'd stop. So push the playhead forward 10 iterations (it could be any number)
+                    this.totalTime(this.rawTime() + this.duration() * 3); // otherwise when the playhead gets back to the beginning, it'd stop. So push the playhead forward 3 iterations (it could be any number)
                 }
             }),
             elements = gsap.utils.toArray(targets),
@@ -1109,7 +1110,7 @@ function initTimeZone() {
     const timeSpan = document.querySelector("#timeSpan");
 
     const optionsTime = {
-        timeZone: 'Europe/Amsterdam',
+        timeZone: 'Europe/London',
         timeZoneName: 'short',
         // year: 'numeric',
         // month: 'numeric',
@@ -1442,3 +1443,17 @@ function initScrolltriggerAnimations() {
     }); // End GSAP Matchmedia
 
 }
+
+// Tool tip animation image on employer dashboard user case
+
+const tooltip = document.querySelector('.tooltip');
+const tooltipImg = document.getElementById('tooltip-image');
+
+tooltip.addEventListener('mouseenter', function () {
+    tooltipImg.src = this.dataset.image;
+    tooltipImg.style.opacity = '1';
+});
+
+tooltip.addEventListener('mouseleave', function () {
+    tooltipImg.style.opacity = '0';
+});
