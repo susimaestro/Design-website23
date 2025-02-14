@@ -3823,3 +3823,17 @@ main.touch .case-intro-image .btn-wrap {
     display: block;
 }
     */
+
+#tooltip-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    /* Increase this for a larger image */
+    max-width: 90%;
+    /* Prevents it from going off-screen */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
