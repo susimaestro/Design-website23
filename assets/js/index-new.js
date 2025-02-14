@@ -1457,3 +1457,28 @@ tooltip.addEventListener('mouseenter', function () {
 tooltip.addEventListener('mouseleave', function () {
     tooltipImg.style.opacity = '0';
 });
+
+
+/* FAQ 1st attempt
+function toggleAnswer(id) {
+    var answer = document.getElementById("answer" + id);
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+    } else {
+        answer.style.display = "block";
+    }
+}
+
+*/
+
+
+/* FAQ 2nd attempt 
+document.querySelectorAll(".faq-question").forEach(item => {
+    item.addEventListener("click", () => {
+        const faq = item.parentNode;
+        faq.classList.toggle("active");
+        const sign = item.querySelector("span");
+        sign.textContent = faq.classList.contains("active") ? "-" : "+";
+    });
+});
+*/
